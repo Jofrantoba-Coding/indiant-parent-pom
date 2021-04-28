@@ -115,8 +115,11 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>${version.maven-compiler-plugin}</version>
                 <configuration>
-                    <source>8</source>
-                    <target>8</target>
+                    <!--/*<verbose>true</verbose>*/-->
+                    <executable>E:\graalvm-ce-java8-20.0.0</executable>
+                    <source>1.8</source>
+                    <target>1.8</target>                    
+                    <release>8</release>
                 </configuration>
             </plugin>
             <plugin>

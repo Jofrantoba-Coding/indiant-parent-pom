@@ -28,3 +28,7 @@ target/
 # files netbeans configuration
 nb-configuration.xml
 nbactions.xml
+
+# visual code config
+.project
+.settings/

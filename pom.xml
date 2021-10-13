@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.jofrantoba.indiant</groupId>
     <artifactId>indiant-parent-pom</artifactId>
-    <version>0.0.0.1</version>
+    <version>1.0.0</version>
     <packaging>pom</packaging>
     <name>Indiant Parent POM</name>
     <url>http://www.jofrantoba.com</url>   
@@ -13,7 +13,7 @@
     </organization>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <version.indiant>0.0.0.1</version.indiant>   
+        <version.indiant>1.0.0</version.indiant>   
         <version.lombok>1.18.18</version.lombok>   
         <version.log4j-api>2.14.1</version.log4j-api>   
         <version.log4j-core>2.14.1</version.log4j-core>
@@ -28,9 +28,9 @@
         <version.maven-surefire-plugin>3.0.0-M5</version.maven-surefire-plugin>
         <version.maven-compiler-plugin>3.8.1</version.maven-compiler-plugin>
         <version.maven-source-plugin>3.2.1</version.maven-source-plugin>
-        <version.maven-jar-plugin>3.2.0</version.maven-jar-plugin>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <version.maven-jar-plugin>3.2.0</version.maven-jar-plugin>        
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
     </properties>
     <dependencies>
         <dependency>
@@ -115,11 +115,14 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>${version.maven-compiler-plugin}</version>
                 <configuration>
-                    <!--/*<verbose>true</verbose>*/-->
+                    <!--/*<verbose>true</verbose>
+                    <release>8</release>
                     <executable>E:\graalvm-ce-java8-20.0.0</executable>
                     <source>1.8</source>
-                    <target>1.8</target>                    
-                    <release>8</release>
+                    <target>1.8</target>                               
+                    */-->
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.target}</target>                               
                 </configuration>
             </plugin>
             <plugin>
